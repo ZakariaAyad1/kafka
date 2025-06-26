@@ -53,7 +53,7 @@ Apache Kafka is a distributed event streaming platform capable of handling trill
 
 ## 📌 Kafka Architecture Diagram
 
-```mermaid
+
 graph LR
     A[Producer(s)] -->|Write messages| B[Kafka Broker(s)]
     B --> C1[Topic: user-events]
