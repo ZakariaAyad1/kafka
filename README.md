@@ -43,3 +43,25 @@ Order tracking systems in e-commerce.
 
 Stream processing using Kafka Streams or Apache Flink.
 
+
+
+# Apache Kafka – Architecture Overview
+
+Apache Kafka is a distributed event streaming platform capable of handling trillions of events per day. It is designed for high throughput, fault tolerance, horizontal scalability, and real-time data processing.
+
+---
+
+## 📌 Kafka Architecture Diagram
+
+```mermaid
+graph LR
+    A[Producer(s)] -->|Write messages| B[Kafka Broker(s)]
+    B --> C1[Topic: user-events]
+    B --> C2[Topic: order-events]
+    C1 -->|Partition 0| D1[Kafka Broker 1]
+    C1 -->|Partition 1| D2[Kafka Broker 2]
+    C2 -->|Partition 0| D1
+    C2 -->|Partition 1| D2
+    D1 --> E[Consumer Group A]
+    D2 --> E
+    E -->|Read messages| F[Stream Processor / Application]
