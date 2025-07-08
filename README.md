@@ -65,3 +65,14 @@ graph LR
     D1 --> E[Consumer Group A]
     D2 --> E
     E -->|Read messages| F[Stream Processor / Application]
+
+
+
+🧠 What Is Keycloak?
+Keycloak is an open-source Identity and Access Management (IAM) solution that provides:
+
+✅ SSO (Single Sign-On)
+✅ Authentication (Login, Registration)
+✅ Authorization (Role-based access control)
+✅ OAuth2, OpenID Connect, SAML
+✅ Social logins (Google, Facebook, etc.)
